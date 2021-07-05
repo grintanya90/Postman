@@ -1,0 +1,133 @@
+{
+	"id": "ad1f8124-d510-4334-ab0e-4e568b528840",
+	"name": "Task age_europe",
+	"timestamp": "2021-06-16T11:52:58.843Z",
+	"collection_id": "7c1cbe3a-9d78-4190-8498-acc1893324df",
+	"folder_id": 0,
+	"environment_id": "ecd183fa-dd3c-4618-ba7d-083a78d2bfce",
+	"totalPass": 27,
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "4bde3a55-5578-43f6-87b1-c36e026ad480",
+			"name": "Boundary value tests (europe)",
+			"time": 138,
+			"responseCode": {
+				"code": 500,
+				"name": "INTERNAL SERVER ERROR"
+			},
+			"tests": {
+				"Boundary value tests (europe)": false
+			},
+			"testPassFailCounts": {
+				"Boundary value tests (europe)": {
+					"pass": 14,
+					"fail": 2
+				},
+				"Body contains age_type underage": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Body contains age_type adult": {
+					"pass": 4,
+					"fail": 0
+				},
+				"Body contains age_type antiquity": {
+					"pass": 4,
+					"fail": 0
+				}
+			},
+			"times": [
+				114,
+				108,
+				83,
+				93,
+				116,
+				104,
+				105,
+				85,
+				119,
+				87,
+				115,
+				92,
+				98,
+				155,
+				145,
+				138
+			],
+			"allTests": [
+				{
+					"Boundary value tests (europe)": true
+				},
+				{
+					"Body contains age_type underage": true,
+					"Boundary value tests (europe)": true
+				},
+				{
+					"Body contains age_type underage": true,
+					"Boundary value tests (europe)": true
+				},
+				{
+					"Body contains age_type underage": true,
+					"Boundary value tests (europe)": true
+				},
+				{
+					"Body contains age_type underage": true,
+					"Boundary value tests (europe)": true
+				},
+				{
+					"Body contains age_type underage": true,
+					"Boundary value tests (europe)": true
+				},
+				{
+					"Body contains age_type adult": true,
+					"Boundary value tests (europe)": true
+				},
+				{
+					"Body contains age_type adult": true,
+					"Boundary value tests (europe)": true
+				},
+				{
+					"Body contains age_type adult": true,
+					"Boundary value tests (europe)": true
+				},
+				{
+					"Body contains age_type adult": true,
+					"Boundary value tests (europe)": true
+				},
+				{
+					"Body contains age_type antiquity": true,
+					"Boundary value tests (europe)": true
+				},
+				{
+					"Body contains age_type antiquity": true,
+					"Boundary value tests (europe)": true
+				},
+				{
+					"Body contains age_type antiquity": true,
+					"Boundary value tests (europe)": true
+				},
+				{
+					"Body contains age_type antiquity": true,
+					"Boundary value tests (europe)": true
+				},
+				{
+					"Boundary value tests (europe)": false
+				},
+				{
+					"Boundary value tests (europe)": false
+				}
+			]
+		}
+	],
+	"count": 16,
+	"totalTime": 1757,
+	"collection": {
+		"requests": [
+			{
+				"id": "4bde3a55-5578-43f6-87b1-c36e026ad480",
+				"method": "POST"
+			}
+		]
+	}
+}

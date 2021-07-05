@@ -1,0 +1,121 @@
+{
+	"id": "b2ef9613-7a99-49cf-aeac-d9ef8e946a31",
+	"name": "Task age_usa",
+	"timestamp": "2021-06-16T11:55:41.744Z",
+	"collection_id": "2ba370b7-1e5d-4616-8dde-5cf42178f345",
+	"folder_id": 0,
+	"environment_id": "ecd183fa-dd3c-4618-ba7d-083a78d2bfce",
+	"totalPass": 19,
+	"totalFail": 4,
+	"results": [
+		{
+			"id": "8907bdcb-141f-4995-9756-b4655faba887",
+			"name": "Boundary value test (usa)",
+			"time": 211,
+			"responseCode": {
+				"code": 500,
+				"name": "INTERNAL SERVER ERROR"
+			},
+			"tests": {
+				"Boundary value test (usa)": false
+			},
+			"testPassFailCounts": {
+				"Boundary value test (usa)": {
+					"pass": 10,
+					"fail": 4
+				},
+				"Body contains age_type underage": {
+					"pass": 4,
+					"fail": 0
+				},
+				"Body contains age_type adult": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Body contains age_type antiquity": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				146,
+				101,
+				146,
+				120,
+				135,
+				141,
+				111,
+				95,
+				174,
+				102,
+				119,
+				94,
+				189,
+				211
+			],
+			"allTests": [
+				{
+					"Boundary value test (usa)": true
+				},
+				{
+					"Body contains age_type underage": true,
+					"Boundary value test (usa)": true
+				},
+				{
+					"Body contains age_type underage": true,
+					"Boundary value test (usa)": true
+				},
+				{
+					"Body contains age_type underage": true,
+					"Boundary value test (usa)": true
+				},
+				{
+					"Body contains age_type underage": true,
+					"Boundary value test (usa)": true
+				},
+				{
+					"Boundary value test (usa)": false
+				},
+				{
+					"Body contains age_type adult": true,
+					"Boundary value test (usa)": true
+				},
+				{
+					"Body contains age_type adult": true,
+					"Boundary value test (usa)": true
+				},
+				{
+					"Boundary value test (usa)": false
+				},
+				{
+					"Body contains age_type antiquity": true,
+					"Boundary value test (usa)": true
+				},
+				{
+					"Body contains age_type antiquity": true,
+					"Boundary value test (usa)": true
+				},
+				{
+					"Body contains age_type antiquity": true,
+					"Boundary value test (usa)": true
+				},
+				{
+					"Boundary value test (usa)": false
+				},
+				{
+					"Boundary value test (usa)": false
+				}
+			]
+		}
+	],
+	"count": 14,
+	"totalTime": 1884,
+	"collection": {
+		"requests": [
+			{
+				"id": "8907bdcb-141f-4995-9756-b4655faba887",
+				"method": "POST"
+			}
+		]
+	}
+}
