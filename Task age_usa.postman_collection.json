@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "2ba370b7-1e5d-4616-8dde-5cf42178f345",
+		"name": "Task age_usa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Boundary value test (usa)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Boundary value test (usa)\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"   \r",
+							"\r",
+							"if (jsonData.age >=0 && jsonData.age <=20){\r",
+							"\r",
+							"    pm.test(\"Body contains age_type underage\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"underage\");\r",
+							"\r",
+							"    });\r",
+							"}\r",
+							"else if (jsonData.age >=21 && jsonData.age <=49){\r",
+							"\r",
+							"    pm.test(\"Body contains age_type adult\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"adult\");\r",
+							"});\r",
+							"}\r",
+							"else if (jsonData.age >=50 && jsonData.age <=100){\r",
+							"\r",
+							"   pm.test(\"Body contains age_type antiquity\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"antiquity\");\r",
+							"});\r",
+							"}\r",
+							"else {\r",
+							"    console.log( 'out of bounds')\r",
+							"}})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "{{age}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://116.203.27.46:5002/age_usa",
+					"protocol": "http",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check 0-20",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"test equivalence classes \", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.age_type).to.eql(\"underage\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"number of films\", function() {\r",
+							"    let jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.content.length).to.eql(8);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://116.203.27.46:5002/age_usa",
+					"protocol": "http",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check 21-49",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"test equivalence classes \", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.age_type).to.eql(\"adult\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"number of films\", function() {\r",
+							"    let jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.content.length).to.eql(17);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "26",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://116.203.27.46:5002/age_usa",
+					"protocol": "http",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check 50-100",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"test equivalence classes \", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.age_type).to.eql(\"antiquity\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"number of films\", function() {\r",
+							"    let jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.content.length).to.eql(8);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "99",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://116.203.27.46:5002/age_usa",
+					"protocol": "http",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
